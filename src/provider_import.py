@@ -14,8 +14,7 @@ def stage_data(filename):
     :param filename: The name of file to import in shared drive
     :return: headers, df
     """
-    filepath_str = '/root/etc/mnt/Import/Backup/' + filename
-    xls_file = pd.ExcelFile(filepath_str)
+    xls_file = pd.ExcelFile(filename)
     df = xls_file.parse('Sheet1')
     return list(df), df
 

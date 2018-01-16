@@ -206,8 +206,7 @@ class LoadProviders(luigi.Task):
     password = luigi.Parameter()
 
     def requires(self):
-        # return ConnectDB(self.filename, self.dbName, self.username, self.password)
-        return None
+        return ConnectDB(self.filename, self.dbName, self.username, self.password)
 
     def output(self):
         timestr = time.strftime("%Y-%m-%d")
@@ -242,6 +241,5 @@ class ImportFlow(luigi.WrapperTask):
         yield LoadProviders(self.filename, self.dbName, self.username, self.password)
         return
 
-import random
 if __name__ == '__main__':
     luigi.run()

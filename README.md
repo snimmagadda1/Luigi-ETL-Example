@@ -1,3 +1,5 @@
+Companion repo for post: http://www.s11a.com/2018/01/09/first-impressions-luigi/
+
 ## Running Tasks
 
 The preferred way to run Luigi tasks is through the `luigi` command line tool that is installed with the pip package. Ex:
